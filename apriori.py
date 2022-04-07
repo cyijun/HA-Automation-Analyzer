@@ -26,7 +26,8 @@ def genDevList():
            re.search("climate.", devName) != None or  # 空调或地暖
            re.search("fan.", devName) != None or  # 风扇
            re.search("light.", devName) != None or  # 灯具
-           re.search("media_player.", devName) != None):  # 电视
+           re.search("media_player.", devName) != None or  # 电视
+           re.search("binary_sensor.", devName) != None):  
             devList.append(measurementDict.get("name"))
     return devList
 
